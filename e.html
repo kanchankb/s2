@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कौटुंबिक तपशील कार्ड स्वरूपात</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .carda {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<h3>14. कौटुंबिक तपशील :</h3>
+<div class="carda" id="cardContainer">
+    <!-- Card Template -->
+    <div class="card">
+        <div class="form-group">
+            <label>नाव व नाते:</label>
+            <input type="text" placeholder="नाव व नाते">
+        </div>
+        <div class="form-group">
+            <label>वय:</label>
+            <input type="text" placeholder="वय">
+        </div>
+        <div class="form-group">
+            <label>लिंग:</label>
+            <input type="text" placeholder="लिंग">
+        </div>
+        <div class="form-group">
+            <label>शिक्षण:</label>
+            <input type="text" placeholder="शिक्षण">
+        </div>
+        <div class="form-group">
+            <label>व्यवसाय:</label>
+            <input type="text" placeholder="व्यवसाय">
+        </div>
+        <div class="form-group">
+            <label>उत्पन्न:</label>
+            <input type="text" placeholder="उत्पन्न">
+        </div>
+        <div class="form-group">
+            <label>आरोपाची जी स्थिती:</label>
+            <input type="text" placeholder="आरोपाची जी स्थिती">
+        </div>
+        <div class="form-group">
+            <label>मानसिक स्थिती:</label>
+            <input type="text" placeholder="मानसिक स्थिती">
+        </div>
+        <div class="form-group">
+            <label>व्यसन:</label>
+            <input type="text" placeholder="व्यसन">
+        </div>
+    </div>
+</div>
+
+<button onclick="addCard()">Add Another Card</button>
+
+<script>
+    function addCard() {
+        const container = document.getElementById('cardContainer');
+        const newCard = document.createElement('div');
+        newCard.className = 'card';
+        newCard.innerHTML = `
+            <div class="form-group">
+                <label>नाव व नाते:</label>
+                <input type="text" placeholder="नाव व नाते">
+            </div>
+            <div class="form-group">
+                <label>वय:</label>
+                <input type="text" placeholder="वय">
+            </div>
+            <div class="form-group">
+                <label>लिंग:</label>
+                <input type="text" placeholder="लिंग">
+            </div>
+            <div class="form-group">
+                <label>शिक्षण:</label>
+                <input type="text" placeholder="शिक्षण">
+            </div>
+            <div class="form-group">
+                <label>व्यवसाय:</label>
+                <input type="text" placeholder="व्यवसाय">
+            </div>
+            <div class="form-group">
+                <label>उत्पन्न:</label>
+                <input type="text" placeholder="उत्पन्न">
+            </div>
+            <div class="form-group">
+                <label>आरोपाची जी स्थिती:</label>
+                <input type="text" placeholder="आरोपाची जी स्थिती">
+            </div>
+            <div class="form-group">
+                <label>मानसिक स्थिती:</label>
+                <input type="text" placeholder="मानसिक स्थिती">
+            </div>
+            <div class="form-group">
+                <label>व्यसन:</label>
+                <input type="text" placeholder="व्यसन">
+            </div>
+        `;
+        container.appendChild(newCard);
+    }
+</script>
+
+</body>
+</html>

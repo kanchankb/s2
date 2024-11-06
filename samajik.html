@@ -1,0 +1,1436 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Data PDF</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        /* Inline styling as per the original content */
+      
+    </style>
+</head>
+<body>
+    <div class="container" id="content">
+        <h3> महाराष्ट्र शासन राजपत्र असाधारण भाग चार अ . मार्च १४ , २०१८ / फाल्गुन २३. शके १९३९</h3>
+        <h2>नमुना-२२ [ नियम १९ (७) पहा ]</h2>
+        <h3>काळजी आणि संरक्षणाची गरज असलेल्या बालकांचा सामाजिक तपासणी अहवाल</h3>
+        <br>
+        <div class="section">
+            <table>
+                <tr>
+                    <td class="left-column">
+                        <label for="serial_no">अ.क्र :</label>
+                        <input type="text" id="serial_no" name="serial_no" placeholder="..................">
+                        
+                        <label for="committee">बाल कल्याण समिती :</label>
+                        <input type="text" id="committee" name="committee" placeholder="..................">
+                        
+                        <label for="case_no">प्रकरण क्रमांक :</label>
+                        <input type="text" id="case_no" name="case_no" placeholder="..................">
+
+
+
+
+                         <label for="date">दिनांक :</label>
+                        <input type="date" id="date" name="date">
+                    </td>
+                    
+                    <!-- <td class="right-column">
+                        <label for="date">दिनांक :</label>
+                        <input type="date" id="date" name="date">
+                    </td> -->
+                </tr>
+            </table>
+            <label for="prepared_by">सामाजिक तपासणी अहवाल तयार करण्यात आला द्वारा :</label>
+            <input type="text" id="prepared_by" name="prepared_by" placeholder="..................">
+
+            <!-- Additional Content omitted for brevity -->
+             
+            <table>             
+                <div class="container">
+                    <tr> 
+                        <th colspan="4">काळजी आणि संरक्षणाची गरज असलेल्या बालकाचा तपशील</th>
+                    </tr>
+                    <tr>
+                        <td>१. नाव :</td>
+                        <td><input type="text" id="child_name" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>आधार कार्ड क्र. :</td>
+                        <td><input type="text" id="aadhar_no_child" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>२. जन्म दिनांक : (DD/MM/YYYY)</td>
+                        <td><input type="text" id="birth_date" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>३. लिंग : (पुरुष / स्त्री)</td>
+                        <td><input type="text" id="gender" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>४. जात :</td>
+                        <td><input type="text" id="caste" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>५. धर्म:</td>
+                        <td><input type="text" id="religion" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>६. वडीलांचे नाव :</td>
+                        <td><input type="text" id="father_name" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>आधार कार्ड क्र. :</td>
+                        <td><input type="text" id="aadhar_no_father" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>७. आईचे नाव :</td>
+                        <td><input type="text" id="mother_name" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>आधार कार्ड क्र. :</td>
+                        <td><input type="text" id="aadhar_no_mother" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>८. पालकांचे नाव :</td>
+                        <td><input type="text" id="guardian_name" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>आधार कार्ड क्र. :</td>
+                        <td><input type="text" id="aadhar_no_guardian" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>बालकाच्या शाळेचे नाव :</td>
+                        <td><input type="text" id="school_name" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>वर्ग-</td>
+                        <td><input type="text" id="grade" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>९. कायमस्वरूपी पत्ता :</td>
+                        <td><input type="text" id="permanent_address" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>१०. पत्त्याची खूण :</td>
+                        <td><input type="text" id="address_mark" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>११. शेवटच्या निवासस्थानाचा पत्ता :</td>
+                        <td><input type="text" id="last_address" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>१२. आई - वडील / कुटुंब सदस्याचे संपर्क क्रमांक :</td>
+                        <td><input type="text" id="contact_number" placeholder=".................."></td>
+                    </tr>
+                </table>
+            
+    <div class="container" id="content">
+        <!-- Disability Section -->
+        <h3>१३. बालक दिव्यांग आहे का :</h3>
+        <select id="disabilityDropdown" onchange="toggleOptions()">
+            <option value="select Option">पर्याय निवडा</option>
+            <option value="no">नाही</option>
+            <option value="yes">होय</option>
+        </select>
+    
+        <div id="radioOptions" class="radio-options">
+            <label><input type="radio" name="disability" value="hearing" id="disability_hearing"> श्रवणदोष</label><br>
+            <label><input type="radio" name="disability" value="speech" id="disability_speech"> बोलण्यात दोष</label><br>
+            <label><input type="radio" name="disability" value="physical" id="disability_physical"> शारिरिक अंपगत्त्व</label><br>
+            <label><input type="radio" name="disability" value="mental" id="disability_mental"> मतीमंदत्त्व</label><br>
+            <label><input type="radio" name="disability" value="other" id="disability_other"> इतर (कृपया स्पष्ट करा)</label>
+        </div>
+    
+        <h3>14. कौटुंबिक तपशील :</h3>
+        <div class="carda" id="cardContainer">
+            <!-- Card Template -->
+            <div class="card">
+                <div class="form-group">
+                    <label>नाव व नाते:</label>
+                    <input type="text" placeholder="नाव व नाते">
+                </div>
+                <div class="form-group">
+                    <label>वय:</label>
+                    <input type="text" placeholder="वय">
+                </div>
+                <div class="form-group">
+                    <label>लिंग:</label>
+                    <input type="text" placeholder="लिंग">
+                </div>
+                <div class="form-group">
+                    <label>शिक्षण:</label>
+                    <input type="text" placeholder="शिक्षण">
+                </div>
+                <div class="form-group">
+                    <label>व्यवसाय:</label>
+                    <input type="text" placeholder="व्यवसाय">
+                </div>
+                <div class="form-group">
+                    <label>उत्पन्न:</label>
+                    <input type="text" placeholder="उत्पन्न">
+                </div>
+                <div class="form-group">
+                    <label>आरोपाची जी स्थिती:</label>
+                    <input type="text" placeholder="आरोपाची जी स्थिती">
+                </div>
+                <div class="form-group">
+                    <label>मानसिक स्थिती:</label>
+                    <input type="text" placeholder="मानसिक स्थिती">
+                </div>
+                <div class="form-group">
+                    <label>व्यसन:</label>
+                    <input type="text" placeholder="व्यसन">
+                </div>
+            </div>
+        </div>
+        
+        <button onclick="addCard()">Add Another Card</button>
+          
+  
+        <!-- Add Button to add new rows -->
+        <!-- <button class="add-row" onclick="addRow()">Add</button> -->
+    
+        <!-- Second Table (15. कुटुंबातील सदस्यांचे आपापसातील संबंध) -->
+        <h3>15. कुटुंबातील सदस्यांचे आपापसातील संबंध :</h3>
+        <table id="relationshipTable">
+            <thead>
+                <tr>
+                    <th>अ.क्र.</th>
+                    <th>नातेसंबंध</th>
+                    <th>संबंध कसा आहे</th>
+                    <th>मदत करत आहे का</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>वडील आणि आई</td>
+                    <td>
+                        <select id="relationship_father_mother_1">
+                            <option value="सौहार्दपूर्ण">सौहार्दपूर्ण</option>
+                            <option value="असौहार्दपूर्ण">असौहार्दपूर्ण</option>
+                            <option value="माहित नाही">माहित नाही</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="helping_father_mother_1">
+                            <option value="होय">होय</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>वडील आणि बालक</td>
+                    <td>
+                        <select id="relationship_father_child_2">
+                            <option value="सौहार्दपूर्ण">सौहार्दपूर्ण</option>
+                            <option value="असौहार्दपूर्ण">असौहार्दपूर्ण</option>
+                            <option value="माहित नाही">माहित नाही</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="helping_father_child_2">
+                            <option value="होय">होय</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>आई आणि बालक</td>
+                    <td>
+                        <select id="relationship_mother_child_3">
+                            <option value="सौहार्दपूर्ण">सौहार्दपूर्ण</option>
+                            <option value="असौहार्दपूर्ण">असौहार्दपूर्ण</option>
+                            <option value="माहित नाही">माहित नाही</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="helping_mother_child_3">
+                            <option value="होय">होय</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>वडील आणि भावंड</td>
+                    <td>
+                        <select id="relationship_father_siblings_4">
+                            <option value="सौहार्दपूर्ण">सौहार्दपूर्ण</option>
+                            <option value="असौहार्दपूर्ण">असौहार्दपूर्ण</option>
+                            <option value="माहित नाही">माहित नाही</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="helping_father_siblings_4">
+                            <option value="होय">होय</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>आई आणि भावंड</td>
+                    <td>
+                        <select id="relationship_mother_siblings_5">
+                            <option value="सौहार्दपूर्ण">सौहार्दपूर्ण</option>
+                            <option value="असौहार्दपूर्ण">असौहार्दपूर्ण</option>
+                            <option value="माहित नाही">माहित नाही</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="helping_mother_siblings_5">
+                            <option value="होय">होय</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>बालक आणि भावंड</td>
+                    <td>
+                        <select id="relationship_child_siblings_6">
+                            <option value="सौहार्दपूर्ण">सौहार्दपूर्ण</option>
+                            <option value="असौहार्दपूर्ण">असौहार्दपूर्ण</option>
+                            <option value="माहित नाही">माहित नाही</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="helping_child_siblings_6">
+                            <option value="होय">होय</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>बालक आणि नाते</td>
+                    <td>
+                        <select id="relationship_child_relatives_7">
+                            <option value="सौहार्दपूर्ण">सौहार्दपूर्ण</option>
+                            <option value="असौहार्दपूर्ण">असौहार्दपूर्ण</option>
+                            <option value="माहित नाही">माहित नाही</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="helping_child_relatives_7">
+                            <option value="होय">होय</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+     <div class="container">
+        <h3>   १६. जर बालक विवाहीत असेल तर पती / पत्नी व मुलांचे नाव,वय व इतर तपशील : (होय / नाही )
+        </h3>
+    <table>
+        <tr>
+            <th colspan="2">
+            </th>
+        </tr>
+        <tr>
+            <td><label id="maritalStatusLabel">विवाहीत आहे का?</label></td>
+            <td>
+                <input type="radio" id="isMarriedYes" name="isMarried" value="yes">
+                <label for="isMarriedYes">होय</label>
+                
+                <input type="radio" id="isMarriedNo" name="isMarried" value="no">
+                <label for="isMarriedNo">नाही</label>
+                
+                <!-- <input type="radio" id="isMarriedSelect" name="isMarried" value="select Option">
+                <label for="isMarriedSelect">पर्याय निवडा</label> -->
+            </td>
+        </tr>
+    </table>
+
+    <table border="1" cellspacing="0" cellpadding="10">
+        <!-- Header Row -->
+        <tr>
+            <th>Family Member</th>
+            <th>नाव व नाते</th>
+            <th>वय</th>
+            <th>लिंग</th>
+            <th>शिक्षण</th>
+            <th>व्यवसाय</th>
+            <th>उत्पन्न</th>
+            <th>आरोग्याची स्थिती</th>
+            <th>मानसिक व्य्ंग्यत्वाचा इतिहास</th>
+            <th>व्यसन</th>
+        </tr>
+
+        <!-- Family Member 1 -->
+        <tr>
+            <td>Family Member 1</td>
+            <td><input type="text" class="form-control" name="name1" placeholder="नाव व नाते"></td>
+            <td><input type="number" class="form-control" name="age1" placeholder="वय"></td>
+            <td>
+                <select class="form-control" name="gender1">
+                    <option value="">-- निवडा --</option>
+                    <option value="male">पुरुष</option>
+                    <option value="female">महिला</option>
+                </select>
+            </td>
+            <td><input type="text" class="form-control" name="education1" placeholder="शिक्षण"></td>
+            <td><input type="text" class="form-control" name="profession1" placeholder="व्यवसाय"></td>
+            <td><input type="text" class="form-control" name="income1" placeholder="उत्पन्न"></td>
+            <td><input type="text" class="form-control" name="health1" placeholder="आरोग्याची स्थिती"></td>
+            <td><input type="text" class="form-control" name="mentalHistory1" placeholder="मानसिक व्य्ंग्यत्वाचा इतिहास"></td>
+            <td><input type="text" class="form-control" name="addiction1" placeholder="व्यसन"></td>
+        </tr>
+
+        <!-- Repeat similar rows for Family Members 2 to 6 -->
+        <tr>
+            <td>Family Member 2</td>
+            <td><input type="text" class="form-control" name="name2" placeholder="नाव व नाते"></td>
+            <td><input type="number" class="form-control" name="age2" placeholder="वय"></td>
+            <td>
+                <select class="form-control" name="gender2">
+                    <option value="">-- निवडा --</option>
+                    <option value="male">पुरुष</option>
+                    <option value="female">महिला</option>
+                </select>
+            </td>
+            <td><input type="text" class="form-control" name="education2" placeholder="शिक्षण"></td>
+            <td><input type="text" class="form-control" name="profession2" placeholder="व्यवसाय"></td>
+            <td><input type="text" class="form-control" name="income2" placeholder="उत्पन्न"></td>
+            <td><input type="text" class="form-control" name="health2" placeholder="आरोग्याची स्थिती"></td>
+            <td><input type="text" class="form-control" name="mentalHistory2" placeholder="मानसिक व्य्ंग्यत्वाचा इतिहास"></td>
+            <td><input type="text" class="form-control" name="addiction2" placeholder="व्यसन"></td>
+        </tr>
+
+        <!-- Additional rows for Family Members 3 to 6 follow the same structure -->
+        <!-- Family Member 3 -->
+        <tr>
+            <td>Family Member 3</td>
+            <td><input type="text" class="form-control" name="name3" placeholder="नाव व नाते"></td>
+            <td><input type="number" class="form-control" name="age3" placeholder="वय"></td>
+            <td>
+                <select class="form-control" name="gender3">
+                    <option value="">-- निवडा --</option>
+                    <option value="male">पुरुष</option>
+                    <option value="female">महिला</option>
+                </select>
+            </td>
+            <td><input type="text" class="form-control" name="education3" placeholder="शिक्षण"></td>
+            <td><input type="text" class="form-control" name="profession3" placeholder="व्यवसाय"></td>
+            <td><input type="text" class="form-control" name="income3" placeholder="उत्पन्न"></td>
+            <td><input type="text" class="form-control" name="health3" placeholder="आरोग्याची स्थिती"></td>
+            <td><input type="text" class="form-control" name="mentalHistory3" placeholder="मानसिक व्य्ंग्यत्वाचा इतिहास"></td>
+            <td><input type="text" class="form-control" name="addiction3" placeholder="व्यसन"></td>
+        </tr>
+
+        <!-- Repeat similar structure for Family Members 4, 5, and 6 -->
+        <!-- Family Member 4 -->
+        <tr>
+            <td>Family Member 4</td>
+            <td><input type="text" class="form-control" name="name4" placeholder="नाव व नाते"></td>
+            <td><input type="number" class="form-control" name="age4" placeholder="वय"></td>
+            <td>
+                <select class="form-control" name="gender4">
+                    <option value="">-- निवडा --</option>
+                    <option value="male">पुरुष</option>
+                    <option value="female">महिला</option>
+                </select>
+            </td>
+            <td><input type="text" class="form-control" name="education4" placeholder="शिक्षण"></td>
+            <td><input type="text" class="form-control" name="profession4" placeholder="व्यवसाय"></td>
+            <td><input type="text" class="form-control" name="income4" placeholder="उत्पन्न"></td>
+            <td><input type="text" class="form-control" name="health4" placeholder="आरोग्याची स्थिती"></td>
+            <td><input type="text" class="form-control" name="mentalHistory4" placeholder="मानसिक व्य्ंग्यत्वाचा इतिहास"></td>
+            <td><input type="text" class="form-control" name="addiction4" placeholder="व्यसन"></td>
+        </tr>
+
+        <!-- Family Member 5 -->
+        <tr>
+            <td>Family Member 5</td>
+            <td><input type="text" class="form-control" name="name5" placeholder="नाव व नाते"></td>
+            <td><input type="number" class="form-control" name="age5" placeholder="वय"></td>
+            <td>
+                <select class="form-control" name="gender5">
+                    <option value="">-- निवडा --</option>
+                    <option value="male">पुरुष</option>
+                    <option value="female">महिला</option>
+                </select>
+            </td>
+            <td><input type="text" class="form-control" name="education5" placeholder="शिक्षण"></td>
+            <td><input type="text" class="form-control" name="profession5" placeholder="व्यवसाय"></td>
+            <td><input type="text" class="form-control" name="income5" placeholder="उत्पन्न"></td>
+            <td><input type="text" class="form-control" name="health5" placeholder="आरोग्याची स्थिती"></td>
+            <td><input type="text" class="form-control" name="mentalHistory5" placeholder="मानसिक व्य्ंग्यत्वाचा इतिहास"></td>
+            <td><input type="text" class="form-control" name="addiction5" placeholder="व्यसन"></td>
+        </tr>
+
+        <!-- Family Member 6 -->
+        <tr>
+            <td>Family Member 6</td>
+            <td><input type="text" class="form-control" name="name6" placeholder="नाव व नाते"></td>
+            <td><input type="number" class="form-control" name="age6" placeholder="वय"></td>
+            <td>
+                <select class="form-control" name="gender6">
+                    <option value="">-- निवडा --</option>
+                    <option value="male">पुरुष</option>
+                    <option value="female">महिला</option>
+                </select>
+            </td>
+            <td><input type="text" class="form-control" name="education6" placeholder="शिक्षण"></td>
+            <td><input type="text" class="form-control" name="profession6" placeholder="व्यवसाय"></td>
+            <td><input type="text" class="form-control" name="income6" placeholder="उत्पन्न"></td>
+            <td><input type="text" class="form-control" name="health6" placeholder="आरोग्याची स्थिती"></td>
+            <td><input type="text" class="form-control" name="mentalHistory6" placeholder="मानसिक व्य्ंग्यत्वाचा इतिहास"></td>
+            <td><input type="text" class="form-control" name="addiction6" placeholder="व्यसन"></td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="container">
+    <table>
+        <tr>
+            <th colspan="8">१७. कुटुंबातील सदस्यांचा गुन्ह्यामध्ये सहभाग असल्याचा इतिहास असेल तर : </th>
+        </tr>
+        <tr>
+            <th>क्र.</th>
+            <th>नाते</th>
+            <th>गुन्ह्याचे स्वरूप</th>
+            <th>प्रकरणाची कायदेशीर स्थिती</th>
+            <th>अटक केली असेल तर</th>
+            <th>कैदेचा कालावधी</th>
+            <th>सद्यस्थिती</th>
+        </tr>
+        <tbody id="crimeHistoryTableBody">
+            <!-- Sample crime history rows -->
+            <tr>
+                <td>1</td>
+                <td>वडील</td>
+                <td><input type="text" class="form-control" id="crimeType1" placeholder=""></td>
+                <td><input type="text" class="form-control" id="legalStatus1" placeholder=""></td>
+                <td><input type="text" class="form-control" id="arrested1" placeholder=""></td>
+                <td><input type="text" class="form-control" id="imprisonmentDuration1" placeholder=""></td>
+                <td><input type="text" class="form-control" id="currentStatus1" placeholder=""></td>
+            </tr>
+            <!-- More rows can be added as needed -->
+            <tr>
+                <td>2</td>
+                <td>सावत्र वडील</td>
+                <td><input type="text" class="form-control" id="crimeType2" placeholder=""></td>
+                <td><input type="text" class="form-control" id="legalStatus2" placeholder=""></td>
+                <td><input type="text" class="form-control" id="arrested2" placeholder=""></td>
+                <td><input type="text" class="form-control" id="imprisonmentDuration2" placeholder=""></td>
+                <td><input type="text" class="form-control" id="currentStatus2" placeholder=""></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>आई</td>
+                <td><input type="text" class="form-control" id="crimeType3" placeholder=""></td>
+                <td><input type="text" class="form-control" id="legalStatus3" placeholder=""></td>
+                <td><input type="text" class="form-control" id="arrested3" placeholder=""></td>
+                <td><input type="text" class="form-control" id="imprisonmentDuration3" placeholder=""></td>
+                <td><input type="text" class="form-control" id="currentStatus3" placeholder=""></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>सावत्र आई</td>
+                <td><input type="text" class="form-control" id="crimeType4" placeholder=""></td>
+                <td><input type="text" class="form-control" id="legalStatus4" placeholder=""></td>
+                <td><input type="text" class="form-control" id="arrested4" placeholder=""></td>
+                <td><input type="text" class="form-control" id="imprisonmentDuration4" placeholder=""></td>
+                <td><input type="text" class="form-control" id="currentStatus4" placeholder=""></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>भाऊ</td>
+                <td><input type="text" class="form-control" id="crimeType5" placeholder=""></td>
+                <td><input type="text" class="form-control" id="legalStatus5" placeholder=""></td>
+                <td><input type="text" class="form-control" id="arrested5" placeholder=""></td>
+                <td><input type="text" class="form-control" id="imprisonmentDuration5" placeholder=""></td>
+                <td><input type="text" class="form-control" id="currentStatus5" placeholder=""></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>बहीण</td>
+                <td><input type="text" class="form-control" id="crimeType6" placeholder=""></td>
+                <td><input type="text" class="form-control" id="legalStatus6" placeholder=""></td>
+                <td><input type="text" class="form-control" id="arrested6" placeholder=""></td>
+                <td><input type="text" class="form-control" id="imprisonmentDuration6" placeholder=""></td>
+                <td><input type="text" class="form-control" id="currentStatus6" placeholder=""></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>इतर</td>
+                <td><input type="text" class="form-control" id="crimeType7" placeholder=""></td>
+                <td><input type="text" class="form-control" id="legalStatus7" placeholder=""></td>
+                <td><input type="text" class="form-control" id="arrested7" placeholder=""></td>
+                <td><input type="text" class="form-control" id="imprisonmentDuration7" placeholder=""></td>
+                <td><input type="text" class="form-control" id="currentStatus7" placeholder=""></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <table>
+        <tbody>
+            <tr>
+                <td>१८.धर्माबाबतचा दृष्टीकोन</td>
+                <td><input type="text" class="form-control" id="religiousView" placeholder=".............."></td>
+            </tr>
+            <tr>
+                <td>१९.वर्तमान राहण्याची व्यवस्था</td>
+                <td><input type="text" class="form-control" id="currentLivingArrangement" placeholder=".............."></td>
+            </tr>
+            <tr>
+                <td>२०. कुटुंबातील सदस्य याबाबतचा दृष्टिकोन</td>
+                <td><input type="text" class="form-control" id="familyMemberView" placeholder=".............."></td>
+            </tr>
+            <tr>
+                <td>२१. राहणीमान</td>
+                <td><input type="text" class="form-control" id="lifestyle" placeholder=".............."></td>
+            </tr>
+            <tr>
+                <td>२२. कुटुंबातील सदस्याची मानसिक स्थिती</td>
+                <td><input type="text" class="form-control" id="familyMentalState" placeholder=".............."></td>
+            </tr>
+            <tr>
+                <td>२३. बालकाची वर्तमन स्थिती</td>
+                <td><input type="text" class="form-control" id="currentChildStatus" placeholder=".............."></td>
+            </tr>
+            <tr>
+                <td>२४. बालकाचे वर्तन, प्रगती आणि विकासातील अडथळे</td>
+                <td><input type="text" class="form-control" id="childBehaviorProgress" placeholder=".............."></td>
+            </tr>
+        </tbody>
+    </table>
+    
+        </div>
+        
+<div class="container">
+    <table>
+        <tr><th colspan="6">25. ज्या शाळेत होता तिचा तपशील:</th></tr>
+        <tr>
+            <td>शाळेत आहे का? (होय / नाही)</td>
+            <td>
+                <select id="schoolDetails" class="form-control" onchange="toggleRadioGroup()">
+                    <option value="नाही">नाही</option>
+                    <option value="होय">होय</option>
+                </select>
+            </td>
+        </tr>
+        <tr id="radioGroup" class="radio-group">
+            <td>शाळेचा प्रकार निवडा:</td>
+            <td>
+                <div class="form-group">
+                    <label><input type="radio" name="schoolType" value="महामंडळ/नगरपालिका/पंचायत" id="schoolType1"> महामंडळ/नगरपालिका/पंचायत</label>
+                </div>
+                <div class="form-group">
+                    <label><input type="radio" name="schoolType" value="शासकीय/अनु.जाती/मागासर्वीय शाळा" id="schoolType2"> शासकीय/अनु.जाती/मागासर्वीय शाळा</label>
+                </div>
+                <div class="form-group">
+                    <label><input type="radio" name="schoolType" value="खाजगी व्यवस्थापन" id="schoolType3"> खाजगी व्यवस्थापन</label>
+                </div>
+                <div class="form-group">
+                    <label><input type="radio" name="schoolType" value="राष्ट्रीय बाल कामगार शाळा" id="schoolType4"> राष्ट्रीय बाल कामगार शाळा</label>
+                </div>
+            </td>
+        </tr>
+    </table>
+        <tr>
+            <td>26. बालकाबाबत वर्गसहकार्याचा दृष्टीकोन :</td>
+            <td>
+                <input type="text" class="form-control" id="peerPerspective" placeholder="..........">
+            </td>
+        </tr>
+        <tr>
+            <td>27. शिक्षक आणि वर्गसहकारी यांचा बालकाप्रती दृष्टीकोन :</td>
+            <td>
+                <input type="text" class="form-control" id="teacherPerspective" placeholder=".........">
+            </td>
+        </tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>29. व्यावसायिक प्रशिक्षण , जर असेल तर</td>
+            <td>
+                <input type="text" class="form-control" id="vocationalTraining" placeholder="..........">
+            </td>
+        </tr>
+        <tr>
+            <td>30. रोजगार तपशील , जर असेल तर .</td>
+            <td>
+                <input type="text" class="form-control" id="employmentDetails" placeholder=".........">
+            </td>
+        </tr>
+        <tr>
+            <td>31. उत्पन्नाचा तपशील :</td>
+            <td>
+                <input type="text" class="form-control" id="incomeDetails" placeholder=".........">
+            </td>
+        </tr>
+        <tr>
+            <td>32. कामाचा तपशील ( व्यावसायिक प्रशिक्षण सोडण्याची कारणे , काम आणि कर्मचा - यांबाबतचा दृष्टीकोन)</td>
+            <td>
+                <input type="text" class="form-control" id="workDetails" placeholder=".........">
+            </td>
+        </tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>34. बालकाचा मित्रांप्रती दृष्टीकोन :</td>
+            <td>
+                <input type="text" class="form-control" id="friendPerspective" placeholder="..........">
+            </td>
+        </tr>
+        <tr>
+            <td>35. मित्रांचा बालकाप्रती दृष्टीकोन :</td>
+            <td>
+                <input type="text" class="form-control" id="friendsPerspective" placeholder=".........">
+            </td>
+        </tr>
+        <tr>
+            <td>36. शेजारील परिसराचे निरीक्षण : (बालकावर शेजारच्या प्रभावाचे मूल्यांकन करण्यासाठी )</td>
+            <td>
+                <input type="text" class="form-control" id="neighborhoodObservation" placeholder=".........">
+            </td>
+        </tr>
+        <tr>
+            <td>37. बालकाची मानसिक स्थिती : (वर्तमान आणि भूतकाळातील )</td>
+            <td>
+                <input type="text" class="form-control" id="mentalState" placeholder=".........">
+            </td>
+        </tr>
+        <tr>
+            <td>38. बालकाची शारीरिक स्थिती : (सध्याची आणि पूर्वीची )</td>
+            <td>
+                <input type="text" class="form-control" id="physicalState" placeholder=".........">
+            </td>
+        </tr>
+    </table>
+   </div>
+    <div class="container">
+        <table>
+            <tr>
+                <th colspan="6">39. बालकाची आरोग्यविषयक स्थिती</th>
+            </tr>
+            <tr>
+                <td>स्थिती</td>
+                <td>आहे/माहितीनाही/नाही</td>
+                <td>स्थिती</td>
+                <td>आहे/माहितीनाही/नाही</td>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>i ) श्वसनासंबंधी विकार</td>
+                    <td>
+                        <select class="form-control" id="respiratoryDisorders">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                    <td>vii ) लैंगिक संक्रमित आजार</td>
+                    <td>
+                        <select class="form-control" id="sexuallyTransmittedDiseases">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ii ) श्रवणदोष</td>
+                    <td>
+                        <select class="form-control" id="hearingImpairment">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                    <td>viii ) मज्जासंस्थेसंबंधीचा विकार</td>
+                    <td>
+                        <select class="form-control" id="nervousSystemDisorders">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>iii ) डोळ्याचे रोग</td>
+                    <td>
+                        <select class="form-control" id="eyeDiseases">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                    <td>ix ) मानसिक अपंगत्व</td>
+                    <td>
+                        <select class="form-control" id="mentalDisability">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>iv ) दातांचे रोग</td>
+                    <td>
+                        <select class="form-control" id="dentalDiseases">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                    <td>x ) शारीरिक अपंगत्व</td>
+                    <td>
+                        <select class="form-control" id="physicalDisability">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>v ) हृदयविकार</td>
+                    <td>
+                        <select class="form-control" id="heartDiseases">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                    <td>xi ) मूत्रपिंड रोग</td>
+                    <td>
+                        <select class="form-control" id="urinaryInfectionDisorders">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>vi ) त्वचाविकार</td>
+                    <td>
+                        <select class="form-control" id="skinDiseases">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                    <td>xii ) इतर</td>
+                    <td>
+                        <select class="form-control" id="otherHealthIssues">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+     </div>
+     
+<div class="container">
+    <table>
+        <tr>
+            <th colspan="2">40. बालकाला काही व्यसन आहे का?</th>
+        </tr>
+    </table>
+    <label for="addictionSelect">बालकाला काही व्यसन आहे का?</label>
+    <select id="addictionSelect" class="form-control" onchange="toggleAddictionType()">
+        <option value="नाही">नाही</option>
+        <option value="होय">होय</option>
+    </select>
+
+    <!-- Hidden section for addiction type -->
+    <div id="addictionTypeDiv" class="hidden">
+        <label for="addictionTypeInput">होय असल्यास - व्यसनाचा प्रकार कोणता</label>
+        <input type="text" id="addictionTypeInput" class="form-control" placeholder="व्यसनाचा प्रकार लिहा................">
+    </div>
+</div>
+
+<div class="container">
+    <table>
+        <tr>
+            <th colspan="2">41. समितीसमोर सादर करण्यापूर्वी बालक कोणासोबत वास्तव्यास होते?</th>
+        </tr>
+        <tr>
+            <td>वास्तव्यास संबंध</td>
+            <td>तपशील</td>
+        </tr>
+        <tbody>
+            <tr>
+                <td>(i) पालक ( पालक ) आई / वडील / दोन्ही</td>
+                <td>
+                    <input type="text" id="parentDetails" class="form-control" placeholder=".........">
+                </td>
+            </tr>
+            <tr>
+                <td>(ii) भावंड / रक्ताचे नातेवाईक</td>
+                <td>
+                    <input type="text" id="siblingDetails" class="form-control" placeholder="..........">
+                </td>
+            </tr>
+            <tr>
+                <td>(iii) पालक नाते</td>
+                <td>
+                    <input type="text" id="relativeDetails" class="form-control" placeholder=".......">
+                </td>
+            </tr>
+            <tr>
+                <td>(iv) मित्र</td>
+                <td>
+                    <input type="text" id="friendDetails" class="form-control" placeholder="......">
+                </td>
+            </tr>
+            <tr>
+                <td>(v) रस्त्यावर</td>
+                <td>
+                    <input type="text" id="streetDetails" class="form-control" placeholder="........">
+                </td>
+            </tr>
+            <tr>
+                <td>(vi) रात्र निवारा</td>
+                <td>
+                    <input type="text" id="shelterDetails" class="form-control" placeholder="........">
+                </td>
+            </tr>
+            <tr>
+                <td>(vii) अनाथालय / वसतीगृह / तत्सम घर</td>
+                <td>
+                    <input type="text" id="orphanageDetails" class="form-control" placeholder="........">
+                </td>
+            </tr>
+            <tr>
+                <td>(viii) इतर ( कृपया स्पष्ट करा )</td>
+                <td>
+                    <input type="text" id="otherDetails" class="form-control" placeholder="........">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <table>
+        <tr>
+            <td>42. बालकाची घरातून पळून जाण्याची प्रवृत्ती / इतिहास असेल तर : </td>
+            <td>
+                <input type="text" id="runningAwayHistory" class="form-control" placeholder=".........">
+            </td>
+        </tr>
+        <tr>
+            <td>43. घरातील शिस्तीबाबत पालकांचा दृष्टीकोन व त्याबाबत बालकाची प्रतिक्रीया </td>
+            <td>
+                <input type="text" id="disciplinePerspective" class="form-control" placeholder=".........">
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="container">
+    <table>
+        <tr>
+            <td>45. बालक हरविले आहे का?</td>
+            <td>
+                <select id="isLost">
+                    <option value="no">नाही</option>
+                    <option value="yes">होय</option>
+                </select>
+            </td>
+        </tr>
+        <tr id="complaintFiled">
+            <td>45.1. जर बालक हरविले असेल तर आई - वडिलांनी तक्रार दाखल केली आहे काय?</td>
+            <td>
+                <select id="complaint">
+                    <option value="no">नाही</option>
+                    <option value="yes">होय</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>46. बालक एखाद्या अपराधाचा बळी आहे का?</td>
+            <td>
+                <select id="isVictim">
+                    <option value="no">नाही</option>
+                    <option value="yes">होय</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- 
+<div class="container">
+    <h1>गैरवर्तनाचे प्रकार</h1>
+    <table>
+        <tr>
+            <th>गैरवर्तनाचे प्रकार</th>
+            <th>होय</th>
+            <th>नाही</th>
+            <th>स्पष्ट करा (पालक / भावंड / नियोक्ते / इतर)</th>
+        </tr>
+        <tr>
+            <td>(i) शाब्दिक गैरवर्तन</td>
+            <td>
+                <input type="radio" id="verbal_abuse_yes" name="verbal_abuse" value="yes">
+                <label for="verbal_abuse_yes">होय</label>
+            </td>
+            <td>
+                <input type="radio" id="verbal_abuse_no" name="verbal_abuse" value="no">
+                <label for="verbal_abuse_no">नाही</label>
+            </td>
+            <td><input type="text" id="verbal_abuse_detail" name="verbal_abuse_detail" placeholder="कृपया स्पष्ट करा"></td>
+        </tr>
+        <tr>
+            <td>(ii) शारीरिक शोषण</td>
+            <td>
+                <input type="radio" id="physical_abuse_yes" name="physical_abuse" value="yes">
+                <label for="physical_abuse_yes">होय</label>
+            </td>
+            <td>
+                <input type="radio" id="physical_abuse_no" name="physical_abuse" value="no">
+                <label for="physical_abuse_no">नाही</label>
+            </td>
+            <td><input type="text" id="physical_abuse_detail" name="physical_abuse_detail" placeholder="कृपया स्पष्ट करा"></td>
+        </tr>
+        <tr>
+            <td>(iii) लैंगिक अत्याचार</td>
+            <td>
+                <input type="radio" id="sexual_abuse_yes" name="sexual_abuse" value="yes">
+                <label for="sexual_abuse_yes">होय</label>
+            </td>
+            <td>
+                <input type="radio" id="sexual_abuse_no" name="sexual_abuse" value="no">
+                <label for="sexual_abuse_no">नाही</label>
+            </td>
+            <td><input type="text" id="sexual_abuse_detail" name="sexual_abuse_detail" placeholder="कृपया स्पष्ट करा"></td>
+        </tr>
+        <tr>
+            <td>(iv) इतर</td>
+            <td>
+                <input type="radio" id="other_abuse_yes" name="other_abuse" value="yes">
+                <label for="other_abuse_yes">होय</label>
+            </td>
+            <td>
+                <input type="radio" id="other_abuse_no" name="other_abuse" value="no">
+                <label for="other_abuse_no">नाही</label>
+            </td>
+            <td><input type="text" id="other_abuse_detail" name="other_abuse_detail" placeholder="कृपया स्पष्ट करा"></td>
+        </tr>
+    </table> -->
+<!-- </div> -->
+
+
+
+<div class="container">
+    
+    <table border="1">
+        <tr>
+            <!-- Main Dropdown Column -->
+            <td>
+                <label for="mainDropdown">गैरवर्तनाचे प्रकार:</label>
+                <select id="mainDropdown" onchange="showYesNoOptions()">
+                    <option value="">गैरवर्तनाचे प्रकार:</option>
+                    <option value="option1">शाब्दिक गैरवर्तन</option>
+                    <option value="option2">शारीरिक शोषण</option>
+                    <option value="option3">लैंगिक अत्याचार</option>
+                    <option value="option4">इतर</option>
+                </select>
+            </td>
+
+            <!-- Yes/No Dropdown Column, hidden initially -->
+            <td id="yesNoColumn" class="hidden">
+                <label for="yesNoDropdown">होय / नाही</label>
+                <select id="yesNoDropdown" onchange="showInputField()">
+                    <option value="">होय / नाही</option>
+                    <option value="yes">होय</option>
+                    <option value="no">नाही</option>
+                </select>
+            </td>
+
+            <!-- Input Field Column, hidden initially -->
+            <td id="inputColumn" class="hidden">
+                <label for="additionalInput">स्पष्ट करा (पालक / भावंड / नियोक्ते / इतर)</label>
+                <input type="text" id="additionalInput" placeholder="कृपया स्पष्ट करा...">
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="container">
+    <table>
+        <tbody>
+            <tr>
+                <th colspan="2">48. बालकासोबत झालेल्या वाईट वागणूकीचे प्रकार</th>
+            </tr>
+            <tr>
+                <td>(i) भोजन न देणे पालक / भावंड / नियोक्ता / इतर ( कृपया स्पष्ट करा )</td>
+                <td>
+                    <input type="text" id="badBehavior1" placeholder="कृपया स्पष्ट करा...">
+                </td>
+            </tr>
+            <tr>
+                <td>(ii) निर्दयीपणे मारहाण- पालक / भावंड / नियोक्ते / अन्य ( कृपया स्पष्ट करा )</td>
+                <td>
+                    <input type="text" id="badBehavior2" placeholder="कृपया स्पष्ट करा...">
+                </td>
+            </tr>
+            <tr>
+                <td>(iii) दुखापत करणे- पालक / भावंड / नियोक्ते / अन्य ( कृपया स्पष्ट करा )</td>
+                <td>
+                    <input type="text" id="badBehavior3" placeholder="कृपया स्पष्ट करा...">
+                </td>
+            </tr>
+            <tr>
+                <td>(iv) पालक / भावंड / नियोक्ते / अन्य ( कृपया स्पष्ट करा )</td>
+                <td>
+                    <input type="text" id="badBehavior4" placeholder="कृपया स्पष्ट करा...">
+                </td>
+            </tr>
+            <tr>
+                <td>(v) इतर (कृपया स्पष्ट करा)</td>
+                <td>
+                    <input type="text" id="badBehavior5" placeholder="कृपया स्पष्ट करा...">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <table>
+        <tr>
+            <th colspan="2">49. बालकाचे शोषण</th>
+        </tr>
+        <tr>
+            <td>(i) पैसे न देता काम करविणे</td>
+            <td>
+                <select id="exploitation1">
+                    <option value="no">नाही</option>
+                    <option value="yes">होय</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>(ii) कमी दरात जास्त वेळ काम करून घेणे</td>
+            <td>
+                <select id="exploitation2">
+                    <option value="no">नाही</option>
+                    <option value="yes">होय</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>(iii) इतर (कृपया स्पष्ट करा)</td>
+            <td>
+                <input type="text" id="exploitationOther" placeholder="स्पष्ट करा...">
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="container">
+    <table>
+        <tr>
+            <td>50. बालकाला कुठल्याही कारणासाठी विकत घेतले किंवा विकले किंवा मानवी वाहतूकीसाठी किंवा इतर कारणासाठी विकले आहे का ?</td>
+            <td>
+                <select id="purchasedOrSold">
+                    <option value="no">नाही</option>
+                    <option value="yes">होय</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>51. बालकाचा भीक मागण्यासाठी वापर करण्यात आला आहे का ?</td>
+            <td>
+                <select id="beggingUse">
+                    <option value="no">नाही</option>
+                    <option value="yes">होय</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>52. बालकाचा कोणतीही टोळी किंवा प्रौढांद्वारे / प्रौढांच्या गटाकडून वापर किंवा त्याचा अंमली पदार्थाच्या कामासाठी वापर केला आहे काय ?</td>
+            <td>
+                <select id="gangUse">
+                    <option value="no">नाही</option>
+                    <option value="yes">होय</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>53. मागील संस्था प्रकरणाचा इतिहास आणि वैयक्तिक काळजी आराखडा, जर असल्यास:</td>
+            <td>
+                <input type="text" id="institutionHistory" placeholder="..............">
+            </td>
+        </tr>
+        <tr>
+            <td>54. गुन्हेगाराचा तपशील: (जसे नाव,वय,संपर्क क्रमांक,पत्ता,शारिरीक गुण,कुटुंबासोबतचे नाते, मध्यस्थाचा समावेश)</td>
+            <td>
+                <input type="text" id="criminalDetails" placeholder="...............">
+            </td>
+        </tr>
+        <tr>
+            <td>55. बालकाचा गुन्हेगाराबाबतचा दृष्टीकोन ?</td>
+            <td>
+                <input type="text" id="childPerspective" placeholder=".............">
+            </td>
+        </tr>
+        <tr>
+            <td>56. पोलिसांना माहिती देण्यात आली आहे का?</td>
+            <td>
+                <select id="policeInformed">
+                    <option value="no">नाही</option>
+                    <option value="yes">होय</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>57. गुन्हेगाराविरूध्द जर काही कारवाई करण्यात आली असेल</td>
+            <td>
+                <input type="text" id="actionTaken" placeholder="..............">
+            </td>
+        </tr>
+        <tr>
+            <td>58. इतर कोणतेही अभिप्राय</td>
+            <td>
+                <input type="text" id="otherComments" placeholder="............">
+            </td>
+        </tr>
+    </table>
+    <!-- <button id="saveDataBtn">Save Data</button> -->
+    <!-- <a href="ShowSamajik.html">
+        <button class="btn" onclick="nextBtn()">Next</button> 
+    </a> -->
+</div>
+
+<div class="container">
+    <table>
+        <th colspan="6">चौकशीचे निष्कर्ष</th>
+        <tr>
+            <td>१.भावनात्मक घटक :</td>
+            <td><input type="text" id="emotionalFactor" name="manavtavadi-gatak"></td>
+        </tr>
+        <tr>
+            <td>2. शारीरिक स्थिती:</td>
+            <td><input type="text" id="physicalCondition" name="sharirik-sthiti"></td>
+        </tr>
+        <tr>
+            <td>3.बुद्धिमत्ता :</td>
+            <td><textarea id="intelligence" name="dukh-varnan"></textarea></td>
+        </tr>
+        <tr>
+            <td>४.सामाजिक आणि आर्थिक घटक:</td>
+            <td><input type="text" id="socialEconomicFactor" name="samajik-gatak"></td>
+        </tr>
+        <tr>
+            <td>५.समस्येची संभाव्य कारणे:</td>
+            <td><input type="text" id="potentialCauses" name="samasyacha-prakar"></td>
+        </tr>
+        <tr>
+            <td>६. गुन्ह्याची कारणे / योगदान घटक यासह प्रकरणाचे विश्लेषण :</td>
+            <td><textarea id="crimeAnalysis" name="survatic-kal"></textarea></td>
+        </tr>
+        <tr>
+            <td>७. बालकाला काळजी व संरक्षणाची गरज असल्याची कारणे::</td>
+            <td><textarea id="needForCare" name="balak-saksha"></textarea></td>
+        </tr>
+        <tr>
+            <td>८.तज्ज्ञांची मते :</td>
+            <td><input type="text" id="expertOpinion" name="rugnacha-nav"></td>
+        </tr>
+        <tr>
+            <td>९. मनो - सामाजिक तज्ज्ञांचे मूल्यांकन::</td>
+            <td><textarea id="socialExpertEvaluation" name="mata-mulyankan"></textarea></td>
+        </tr>
+        <tr>
+            <td>१०. धार्मिक कारक ::</td>
+            <td><input type="text" id="religiousFactor" name="sharirik-kasht"></td>
+        </tr>
+        <tr>
+            <td>११. बालकाला ज्या कुटुंबात पुनःस्थापित करावयाचे आहे त्याचे जोखीम विश्लेषण :</td>
+            <td><textarea id="riskAnalysis" name="balak-jakhm-purava"></textarea></td>
+        </tr>
+        <tr>
+            <td>१२. मागील संस्था / प्रकरणाचा इतिहास आणि वैयक्तिक काळजी आराखडा , जर असल्यास ::</td>
+            <td><textarea id="previousInstitutionHistory" name="stanik-bhumika"></textarea></td>
+        </tr>
+        <tr>
+            <td>१३. बालकाला मनोवैज्ञानिक सहाय्य, पुनर्वसन व पुनर्एकात्मिकरण याबाबत बालविकास अधिकारी / व्यक्तीचिकीत्सक / सामाजिक कार्यकर्ता यांची शिफारस आणि सुचविण्यात आलेली योजना . स्वाक्षरी ( नियुक्त करण्यात आलेल्या व्यक्तीची ):</td>
+            <td><textarea id="psychologicalSupportRecommendation" name="manasik-sakshamt-details"></textarea></td>
+        </tr>
+        <tr>
+            <td>अभिप्राय :</td>
+            <td><textarea id="feedback" name="abhyas"></textarea></td>
+        </tr>
+    </table>
+    <div class="last">
+        <label>अहवाल तयार करणाऱ्यांच्या व्यक्तीची स्वाक्षरी:<input type="text" id="reporterSignature" name="reporter-name" ></label>
+        <label>नाव: <input type="text" id="reporterName" name="reporter-name"></label>
+        <label>पदनाम: <input type="text" id="reporterDesignation" name="reporter-designation"></label>
+        <label>दिनांक: <input type="date" id="reportDate" name="date"></label>
+        <label>ठिकाण: <input type="text" id="reportLocation" name="location"></label>
+    </div>
+
+        <h3>महिला व बाल विकास अधिकारी कार्यालय</h3> 
+        <!-- <button onclick="generatePDF()">Convert to PDF</button> -->
+
+
+        <div class="button-container">
+            <button class="save-pdf"onclick="generatePDF()">Convert to PDF</button>
+        </div>
+        
+    </div>
+        
+
+    
+  
+    <script>
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF('p', 'pt', 'a4');
+            const content = document.querySelector("#content");
+
+            const pageHeight = pdf.internal.pageSize.height;
+            const pageWidth = pdf.internal.pageSize.width;
+
+            html2canvas(content, { scale: 1.5 })  // Reduced scale for smaller file size
+                .then(canvas => {
+                    const imgData = canvas.toDataURL("image/jpeg", 0.7);  // JPEG with 0.7 quality for compression
+                    const imgHeight = (canvas.height * pageWidth) / canvas.width;
+                    let heightLeft = imgHeight;
+                    let position = 0;
+
+                    pdf.addImage(imgData, 'JPEG', 0, position, pageWidth, imgHeight);
+                    heightLeft -= pageHeight;
+
+                    while (heightLeft > 0) {
+                        position = heightLeft - imgHeight + pageHeight;
+                        pdf.addPage();
+                        pdf.addImage(imgData, 'JPEG', 0, position, pageWidth, imgHeight);
+                        heightLeft -= pageHeight;
+                    }
+
+                    pdf.save("Submitted_Data.pdf");
+                });
+        }
+
+
+
+
+
+        function toggleOptions() {
+    const dropdown = document.getElementById("disabilityDropdown");
+    const radioOptions = document.getElementById("radioOptions");
+
+    if (dropdown.value === "yes") {
+        radioOptions.style.display = "block";
+    } else {
+        radioOptions.style.display = "none";
+    }
+}
+
+
+
+
+
+
+
+
+
+function showYesNoOptions() {
+            const mainDropdown = document.getElementById("mainDropdown");
+            const yesNoColumn = document.getElementById("yesNoColumn");
+            const inputColumn = document.getElementById("inputColumn");
+            
+            if (mainDropdown.value) {
+                yesNoColumn.classList.remove("hidden");
+            } else {
+                yesNoColumn.classList.add("hidden");
+                inputColumn.classList.add("hidden");
+            }
+        }
+
+        function showInputField() {
+            const yesNoDropdown = document.getElementById("yesNoDropdown");
+            const inputColumn = document.getElementById("inputColumn");
+
+            if (yesNoDropdown.value === "yes") {
+                inputColumn.classList.remove("hidden");
+            } else {
+                inputColumn.classList.add("hidden");
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for card
+
+
+function addCard() {
+        const container = document.getElementById('cardContainer');
+        const newCard = document.createElement('div');
+        newCard.className = 'card';
+        newCard.innerHTML = `
+            <div class="form-group">
+                <label>नाव व नाते:</label>
+                <input type="text" placeholder="नाव व नाते">
+            </div>
+            <div class="form-group">
+                <label>वय:</label>
+                <input type="text" placeholder="वय">
+            </div>
+            <div class="form-group">
+                <label>लिंग:</label>
+                <input type="text" placeholder="लिंग">
+            </div>
+            <div class="form-group">
+                <label>शिक्षण:</label>
+                <input type="text" placeholder="शिक्षण">
+            </div>
+            <div class="form-group">
+                <label>व्यवसाय:</label>
+                <input type="text" placeholder="व्यवसाय">
+            </div>
+            <div class="form-group">
+                <label>उत्पन्न:</label>
+                <input type="text" placeholder="उत्पन्न">
+            </div>
+            <div class="form-group">
+                <label>आरोपाची जी स्थिती:</label>
+                <input type="text" placeholder="आरोपाची जी स्थिती">
+            </div>
+            <div class="form-group">
+                <label>मानसिक स्थिती:</label>
+                <input type="text" placeholder="मानसिक स्थिती">
+            </div>
+            <div class="form-group">
+                <label>व्यसन:</label>
+                <input type="text" placeholder="व्यसन">
+            </div>
+        `;
+        container.appendChild(newCard);
+    }
+
+
+    </script>
+</body>
+</html>

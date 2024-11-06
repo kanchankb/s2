@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+       <h3> महाराष्ट्र शासन राजपत्र असाधारण भाग चार अ . मार्च १४ , २०१८ / फाल्गुन २३. शके १९३९</h3>
+        <h2>नमुना-२२ [ नियम १९ (७) पहा ]</h2>
+        <h3>काळजी आणि संरक्षणाची गरज असलेल्या बालकांचा सामाजिक तपासणी अहवाल</h3>
+        <br>
+        <div class="section">
+            <table>
+                <tr>
+                    <!-- Left side with अ.क्र, बाल कल्याण समिती, and प्रकरण क्रमांक -->
+                    <td class="left-column">
+                        <label for="serial_no">अ.क्र :</label>
+                        <input type="text" id="serial_no" name="serial_no" placeholder="..................">
+                         <!-- <p id="serial_no"></p> -->
+                        
+                        <label for="committee">बाल कल्याण समिती :</label>
+                        <input type="text" id="committee" name="committee" placeholder="..................">
+                        <!-- <p id="committee"></p> -->
+
+                        <label for="case_no">प्रकरण क्रमांक :</label>
+                        <input type="text" id="case_no" name="case_no" placeholder="..................">
+                    </td>
+                    
+                    <!-- Right side with दिनांक -->
+                    <td class="right-column">
+                        <label for="date">दिनांक :</label>
+                        <input type="date" id="date" name="date">
+                    </td>
+                </tr>
+            </table>
+
+            <!-- New row for "सामाजिक तपासणी अहवाल तयार करण्यात आला द्वारा :" -->
+            <label for="prepared_by">सामाजिक तपासणी अहवाल तयार करण्यात आला द्वारा :</label>
+            <input type="text" id="prepared_by" name="prepared_by" placeholder="..................">
+
+            <table>             
+                <div class="container">
+                    <tr> 
+                        <th colspan="4">काळजी आणि संरक्षणाची गरज असलेल्या बालकाचा तपशील</th>
+                    </tr>
+                    <tr>
+                        <td>१. नाव :</td>
+                        <td><input type="text" id="child_name" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>आधार कार्ड क्र. :</td>
+                        <td><input type="text" id="aadhar_no_child" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>२. जन्म दिनांक : (DD/MM/YYYY)</td>
+                        <td><input type="text" id="birth_date" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>३. लिंग : (पुरुष / स्त्री)</td>
+                        <td><input type="text" id="gender" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>४. जात :</td>
+                        <td><input type="text" id="caste" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>५. धर्म:</td>
+                        <td><input type="text" id="religion" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>६. वडीलांचे नाव :</td>
+                        <td><input type="text" id="father_name" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>आधार कार्ड क्र. :</td>
+                        <td><input type="text" id="aadhar_no_father" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>७. आईचे नाव :</td>
+                        <td><input type="text" id="mother_name" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>आधार कार्ड क्र. :</td>
+                        <td><input type="text" id="aadhar_no_mother" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>८. पालकांचे नाव :</td>
+                        <td><input type="text" id="guardian_name" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>आधार कार्ड क्र. :</td>
+                        <td><input type="text" id="aadhar_no_guardian" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>बालकाच्या शाळेचे नाव :</td>
+                        <td><input type="text" id="school_name" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>वर्ग-</td>
+                        <td><input type="text" id="grade" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>९. कायमस्वरूपी पत्ता :</td>
+                        <td><input type="text" id="permanent_address" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>१०. पत्त्याची खूण :</td>
+                        <td><input type="text" id="address_mark" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>११. शेवटच्या निवासस्थानाचा पत्ता :</td>
+                        <td><input type="text" id="last_address" placeholder=".................."></td>
+                    </tr>
+                    <tr>
+                        <td>१२. आई - वडील / कुटुंब सदस्याचे संपर्क क्रमांक :</td>
+                        <td><input type="text" id="contact_number" placeholder=".................."></td>
+                    </tr>
+                </table>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+    // First part: Retrieve values from local storage
+    const serialNo = localStorage.getItem('serialNo');
+    const committee = localStorage.getItem('committee');
+    const caseNo = localStorage.getItem('caseNo');
+    const date = localStorage.getItem('date');
+    const preparedBy = localStorage.getItem('preparedBy');
+    const childName = localStorage.getItem('childName');
+    const aadharNoChild = localStorage.getItem('aadharNoChild');
+    const birthDate = localStorage.getItem('birthDate');
+    const gender = localStorage.getItem('gender');
+    const caste = localStorage.getItem('caste');
+    const religion = localStorage.getItem('religion');
+    const fatherName = localStorage.getItem('fatherName');
+    const aadharNoFather = localStorage.getItem('aadharNoFather');
+    const motherName = localStorage.getItem('motherName');
+    const aadharNoMother = localStorage.getItem('aadharNoMother');
+    const guardianName = localStorage.getItem('guardianName');
+    const aadharNoGuardian = localStorage.getItem('aadharNoGuardian');
+    const schoolName = localStorage.getItem('schoolName');
+    const grade = localStorage.getItem('grade');
+    const permanentAddress = localStorage.getItem('permanentAddress');
+    const addressMark = localStorage.getItem('addressMark');
+    const lastAddress = localStorage.getItem('lastAddress');
+    const contactNumber = localStorage.getItem('contactNumber');
+
+    document.getElementById('serial_no').value = serialNo;
+    document.getElementById('committee').value = committee;
+    document.getElementById('case_no').value = caseNo;
+    document.getElementById('date').value = date;
+    document.getElementById('prepared_by').value = preparedBy;
+    document.getElementById('child_name').value = childName;
+    document.getElementById('aadhar_no_child').value = aadharNoChild;
+    document.getElementById('birth_date').value = birthDate;
+    document.getElementById('gender').value = gender;
+    document.getElementById('caste').value = caste;
+    document.getElementById('religion').value = religion;
+    document.getElementById('father_name').value = fatherName;
+    document.getElementById('aadhar_no_father').value = aadharNoFather;
+    document.getElementById('mother_name').value = motherName;
+    document.getElementById('aadhar_no_mother').value = aadharNoMother;
+    document.getElementById('guardian_name').value = guardianName;
+    document.getElementById('aadhar_no_guardian').value = aadharNoGuardian;
+    document.getElementById('school_name').value = schoolName;
+    document.getElementById('grade').value = grade;
+    document.getElementById('permanent_address').value = permanentAddress;
+    document.getElementById('address_mark').value = addressMark;
+    document.getElementById('last_address').value = lastAddress;
+    document.getElementById('contact_number').value = contactNumber;
+});
+ </script>
+
+
+<div class="container">
+    <h3>Disability Information:</h3>
+    <p>Disability: <span id="disabilityDropdownDisplay"></span></p>
+    <p>Disability Type: <span id="disabilityTypeDisplay"></span></p>
+
+    <h3>Family Member Details:</h3>
+    <table id="familyDetailsDisplayTable">
+        <thead>
+            <tr>
+                <th>अ.क्र.</th>
+                <th>नाव व नाते</th>
+                <th>वय</th>
+                <th>लिंग</th>
+                <th>शिक्षण</th>
+                <th>व्यवसाय</th>
+                <th>उत्पन्न</th>
+                <th>आरोपाची जी स्थिती</th>
+                <th>मानसिक स्थिती</th>
+                <th>व्यसन</th>
+            </tr>
+        </thead>
+        <tbody id="familyDetailsTableBody">
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+
+    <h3>Family Relationships:</h3>
+    <table id="relationshipTableDisplay">
+        <thead>
+            <tr>
+                <th>अ.क्र.</th>
+                <th>नातेसंबंध</th>
+                <th>संबंध कसा आहे</th>
+                <th>मदत करत आहे का</th>
+            </tr>
+        </thead>
+        <tbody id="relationshipTableBody">
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // Fetch and display disability info
+    const disabilityDropdown = localStorage.getItem('disabilityDropdown');
+    const disabilityType = localStorage.getItem('disabilityType');
+
+    document.getElementById('disabilityDropdownDisplay').textContent = disabilityDropdown;
+    document.getElementById('disabilityTypeDisplay').textContent = disabilityType;
+
+    // Fetch and display family member data
+    const familyMemberData = JSON.parse(localStorage.getItem('familyMemberData'));
+    const familyDetailsTableBody = document.getElementById('familyDetailsTableBody');
+
+    for (let i = 1; i <= 5; i++) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${i}</td>
+            <td>${familyMemberData['name_' + i]}</td>
+            <td>${familyMemberData['age_' + i]}</td>
+            <td>${familyMemberData['gender_' + i]}</td>
+            <td>${familyMemberData['education_' + i]}</td>
+            <td>${familyMemberData['profession_' + i]}</td>
+            <td>${familyMemberData['income_' + i]}</td>
+            <td>${familyMemberData['accusation_status_' + i]}</td>
+            <td>${familyMemberData['mental_status_' + i]}</td>
+            <td>${familyMemberData['addiction_' + i]}</td>
+        `;
+        familyDetailsTableBody.appendChild(row);
+    }
+
+    // Fetch and display family relationship data
+    const familyRelationships = JSON.parse(localStorage.getItem('familyRelationships'));
+    const relationshipTableBody = document.getElementById('relationshipTableBody');
+
+    const relationships = [
+        { relation: 'वडील आणि आई', status: 'relationship_father_mother_1', help: 'helping_father_mother_1' },
+        { relation: 'वडील आणि बालक', status: 'relationship_father_child_2', help: 'helping_father_child_2' },
+        { relation: 'आई आणि बालक', status: 'relationship_mother_child_3', help: 'helping_mother_child_3' },
+        { relation: 'वडील आणि भावंड', status: 'relationship_father_siblings_4', help: 'helping_father_siblings_4' },
+        { relation: 'आई आणि भावंड', status: 'relationship_mother_siblings_5', help: 'helping_mother_siblings_5' },
+        { relation: 'बालक आणि भावंड', status: 'relationship_child_siblings_6', help: 'helping_child_siblings_6' },
+        { relation: 'बालक आणि नाते', status: 'relationship_child_relatives_7', help: 'helping_child_relatives_7' }
+    ];
+
+    relationships.forEach((rel, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${rel.relation}</td>
+            <td>${familyRelationships[rel.status]}</td>
+            <td>${familyRelationships[rel.help]}</td>
+        `;
+        relationshipTableBody.appendChild(row);
+    });
+</script>
+
+</div>
+
+<div class="container">
+    <h3 id="familyDetailsTitle">१६. जर बालक विवाहीत असेल तर पती / पत्नी व मुलांचे नाव,वय व इतर तपशील : (होय / नाही )</h3>
+    <label id="maritalStatusLabel">विवाहीत आहे का?</label>
+    <p id="maritalStatus"></p>
+
+    <table id="familyDetailsTable">
+        <thead>
+            <tr>
+                <th>नाव व नाते</th>
+                <th>वय</th>
+                <th>लिंग</th>
+                <th>शिक्षण</th>
+                <th>व्यवसाय</th>
+                <th>उत्पन्न</th>
+                <th>आरोग्याची स्थिती</th>
+                <th>मानसिक व्य्ंग्यत्वाचा इतिहास</th>
+                <th>व्यसन</th>
+            </tr>
+        </thead>
+        <tbody id="familyDetailsBody"></tbody>
+    </table>
+
+    <h3 colspan="8">१७. कुटुंबातील सदस्यांचा गुन्ह्यामध्ये सहभाग असल्याचा इतिहास असेल तर : </h3>
+    <table id="crimeHistoryTable">
+        <thead>
+            <tr>
+                <th>नाते</th>
+                <th>गुन्ह्याचे स्वरूप</th>
+                <th>प्रकरणाची कायदेशीर स्थिती</th>
+                <th>अटक केली असेल तर</th>
+                <th>कैदेचा कालावधी</th>
+                <th>सद्यस्थिती</th>
+            </tr>
+        </thead>
+        <tbody id="crimeHistoryBody"></tbody>
+    </table>
+    <!-- <h2>Additional Information</h2> -->
+    <table id="additionalInfoTable">
+        <thead>
+            <tr>
+                <th>विषय</th>
+                <th>तपशील</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>धर्माबाबतचा दृष्टीकोन</td>
+                <td id="religiousViewDisplay"></td>
+            </tr>
+            <tr>
+                <td>वर्तमान राहण्याची व्यवस्था</td>
+                <td id="currentLivingArrangementDisplay"></td>
+            </tr>
+            <tr>
+                <td>कुटुंबातील सदस्य याबाबतचा दृष्टिकोन</td>
+                <td id="familyMemberViewDisplay"></td>
+            </tr>
+            <tr>
+                <td>राहणीमान</td>
+                <td id="lifestyleDisplay"></td>
+            </tr>
+            <tr>
+                <td>कुटुंबातील सदस्याची मानसिक स्थिती</td>
+                <td id="familyMentalStateDisplay"></td>
+            </tr>
+            <tr>
+                <td>बालकाची वर्तमन स्थिती</td>
+                <td id="currentChildStatusDisplay"></td>
+            </tr>
+            <tr>
+                <td>बालकाचे वर्तन, प्रगती आणि विकासातील अडथळे</td>
+                <td id="childBehaviorProgressDisplay"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <script>
+        // Function to load and display the data from local storage
+        function loadData() {
+            const formData = JSON.parse(localStorage.getItem("formData"));
+
+            // Display marital status
+            document.getElementById("maritalStatus").textContent = formData.maritalStatus || 'अज्ञात';
+
+            // Display family members details
+            const familyDetailsBody = document.getElementById("familyDetailsBody");
+            formData.familyDetails.forEach(member => {
+                const row = familyDetailsBody.insertRow();
+                row.insertCell(0).textContent = member.name;
+                row.insertCell(1).textContent = member.age;
+                row.insertCell(2).textContent = member.gender;
+                row.insertCell(3).textContent = member.education;
+                row.insertCell(4).textContent = member.profession;
+                row.insertCell(5).textContent = member.income;
+                row.insertCell(6).textContent = member.health;
+                row.insertCell(7).textContent = member.mentalHistory;
+                row.insertCell(8).textContent = member.addiction;
+            });
+
+            // Display crime history
+            const crimeHistoryBody = document.getElementById("crimeHistoryBody");
+            formData.crimeHistory.forEach(crime => {
+                const row = crimeHistoryBody.insertRow();
+                row.insertCell(0).textContent = crime.relationship;
+                row.insertCell(1).textContent = crime.crimeType;
+                row.insertCell(2).textContent = crime.legalStatus;
+                row.insertCell(3).textContent = crime.arrested;
+                row.insertCell(4).textContent = crime.imprisonmentDuration;
+                row.insertCell(5).textContent = crime.currentStatus;
+            });
+
+            // Display additional information
+            document.getElementById("religiousViewDisplay").textContent = formData.additionalData.religiousView || 'अज्ञात';
+            document.getElementById("currentLivingArrangementDisplay").textContent = formData.additionalData.currentLivingArrangement || 'अज्ञात';
+            document.getElementById("familyMemberViewDisplay").textContent = formData.additionalData.familyMemberView || 'अज्ञात';
+            document.getElementById("lifestyleDisplay").textContent = formData.additionalData.lifestyle || 'अज्ञात';
+            document.getElementById("familyMentalStateDisplay").textContent = formData.additionalData.familyMentalState || 'अज्ञात';
+            document.getElementById("currentChildStatusDisplay").textContent = formData.additionalData.currentChildStatus || 'अज्ञात';
+            document.getElementById("childBehaviorProgressDisplay").textContent = formData.additionalData.childBehaviorProgress || 'अज्ञात';
+        }
+
+        // Call loadData on page load
+        window.onload = loadData;
+    </script>
+
+<div class="container">
+    <h2>25. ज्या शाळेत होता तिचा तपशील:</h2>
+
+    <table>
+        <tr><th colspan="2">25. ज्या शाळेत होता तिचा तपशील:</th></tr>
+        <tr>
+            <td>शाळेत आहे का?</td>
+            <td id="displaySchoolDetails"></td>
+        </tr>
+        <tr>
+            <td>शाळेचा प्रकार:</td>
+            <td id="displaySchoolType"></td>
+        </tr>
+    </table>
+      
+    
+    <table>
+        <tr>
+            <td>26. बालकाबाबत वर्गसहकार्याचा दृष्टीकोन :</td>
+            <td>
+                <input type="text" class="form-control" id="peerPerspective" placeholder="..........">
+            </td>
+        </tr>
+        <tr>
+            <td>27. शिक्षक आणि वर्गसहकारी यांचा बालकाप्रती दृष्टीकोन :</td>
+            <td>
+                <input type="text" class="form-control" id="teacherPerspective" placeholder=".........">
+            </td>
+        </tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>29. व्यावसायिक प्रशिक्षण , जर असेल तर</td>
+            <td>
+                <input type="text" class="form-control" id="vocationalTraining" placeholder="..........">
+            </td>
+        </tr>
+        <tr>
+            <td>30. रोजगार तपशील , जर असेल तर .</td>
+            <td>
+                <input type="text" class="form-control" id="employmentDetails" placeholder=".........">
+            </td>
+        </tr>
+        <tr>
+            <td>31. उत्पन्नाचा तपशील :</td>
+            <td>
+                <input type="text" class="form-control" id="incomeDetails" placeholder=".........">
+            </td>
+        </tr>
+        <tr>
+            <td>32. कामाचा तपशील ( व्यावसायिक प्रशिक्षण सोडण्याची कारणे , काम आणि कर्मचा - यांबाबतचा दृष्टीकोन)</td>
+            <td>
+                <input type="text" class="form-control" id="workDetails" placeholder=".........">
+            </td>
+        </tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>34. बालकाचा मित्रांप्रती दृष्टीकोन :</td>
+            <td>
+                <input type="text" class="form-control" id="friendPerspective" placeholder="..........">
+            </td>
+        </tr>
+        <tr>
+            <td>35. मित्रांचा बालकाप्रती दृष्टीकोन :</td>
+            <td>
+                <input type="text" class="form-control" id="friendsPerspective" placeholder=".........">
+            </td>
+        </tr>
+        <tr>
+            <td>36. शेजारील परिसराचे निरीक्षण : (बालकावर शेजारच्या प्रभावाचे मूल्यांकन करण्यासाठी )</td>
+            <td>
+                <input type="text" class="form-control" id="neighborhoodObservation" placeholder=".........">
+            </td>
+        </tr>
+        <tr>
+            <td>37. बालकाची मानसिक स्थिती : (वर्तमान आणि भूतकाळातील )</td>
+            <td>
+                <input type="text" class="form-control" id="mentalState" placeholder=".........">
+            </td>
+        </tr>
+        <tr>
+            <td>38. बालकाची शारीरिक स्थिती : (सध्याची आणि पूर्वीची )</td>
+            <td>
+                <input type="text" class="form-control" id="physicalState" placeholder=".........">
+            </td>
+        </tr>
+    </table>
+    
+    <div class="container">
+        <table>
+            <tr>
+                <th colspan="6">39. बालकाची आरोग्यविषयक स्थिती</th>
+            </tr>
+            <tr>
+                <td>स्थिती</td>
+                <td>आहे/माहितीनाही/नाही</td>
+                <td>स्थिती</td>
+                <td>आहे/माहितीनाही/नाही</td>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>i ) श्वसनासंबंधी विकार</td>
+                    <td>
+                        <select class="form-control" id="respiratoryDisorders">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                    <td>vii ) लैंगिक संक्रमित आजार</td>
+                    <td>
+                        <select class="form-control" id="sexuallyTransmittedDiseases">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ii ) श्रवणदोष</td>
+                    <td>
+                        <select class="form-control" id="hearingImpairment">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                    <td>viii ) मज्जासंस्थेसंबंधीचा विकार</td>
+                    <td>
+                        <select class="form-control" id="nervousSystemDisorders">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>iii ) डोळ्याचे रोग</td>
+                    <td>
+                        <select class="form-control" id="eyeDiseases">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                    <td>ix ) मानसिक अपंगत्व</td>
+                    <td>
+                        <select class="form-control" id="mentalDisability">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>iv ) दातांचे रोग</td>
+                    <td>
+                        <select class="form-control" id="dentalDiseases">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                    <td>x ) शारीरिक अपंगत्व</td>
+                    <td>
+                        <select class="form-control" id="physicalDisability">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>v ) हृदयविकार</td>
+                    <td>
+                        <select class="form-control" id="heartDiseases">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                    <td>xi ) मूत्रपिंड रोग</td>
+                    <td>
+                        <select class="form-control" id="urinaryInfectionDisorders">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>vi ) त्वचाविकार</td>
+                    <td>
+                        <select class="form-control" id="skinDiseases">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                    <td>xii ) इतर</td>
+                    <td>
+                        <select class="form-control" id="otherHealthIssues">
+                            <option value="आहे">आहे</option>
+                            <option value="माहितीनाही">माहितीनाही</option>
+                            <option value="नाही">नाही</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+     function displayData() {
+        document.getElementById('displaySchoolDetails').textContent = localStorage.getItem('schoolDetails');
+        document.getElementById('displaySchoolType').textContent = localStorage.getItem('schoolType');
+     }
+     displayData();
+    // Function to load data from local storage and populate the fields
+    function loadData() {
+        document.getElementById('peerPerspective').value = localStorage.getItem('peerPerspective') || '';
+        document.getElementById('teacherPerspective').value = localStorage.getItem('teacherPerspective') || '';
+        document.getElementById('vocationalTraining').value = localStorage.getItem('vocationalTraining') || '';
+        document.getElementById('employmentDetails').value = localStorage.getItem('employmentDetails') || '';
+        document.getElementById('incomeDetails').value = localStorage.getItem('incomeDetails') || '';
+        document.getElementById('workDetails').value = localStorage.getItem('workDetails') || '';
+        document.getElementById('friendPerspective').value = localStorage.getItem('friendPerspective') || '';
+        document.getElementById('friendsPerspective').value = localStorage.getItem('friendsPerspective') || '';
+        document.getElementById('neighborhoodObservation').value = localStorage.getItem('neighborhoodObservation') || '';
+        document.getElementById('mentalState').value = localStorage.getItem('mentalState') || '';
+        document.getElementById('physicalState').value = localStorage.getItem('physicalState') || '';
+        
+        // Load health status values
+        const healthIssues = [
+            'respiratoryDisorders', 
+            'hearingImpairment', 
+            'eyeDiseases', 
+            'dentalDiseases', 
+            'heartDiseases', 
+            'skinDiseases', 
+            'sexuallyTransmittedDiseases', 
+            'nervousSystemDisorders', 
+            'mentalDisability', 
+            'physicalDisability', 
+            'urinaryInfectionDisorders',
+            'otherHealthIssues'
+        ];
+        healthIssues.forEach(issue => {
+            document.getElementById(issue).value = localStorage.getItem(issue) || '';
+        });
+    }
+
+    // Load data when the page is loaded
+    window.onload = loadData;
+</script>
+<div class="container">
+    <table>
+        <tr>
+            <th colspan="2">40. बालकाला काही व्यसन आहे का?</th>
+        </tr>
+    </table>
+    <label for="addiction">बालकाला काही व्यसन आहे का?</label>
+    <select id="addictionSelect" class="form-control" disabled>
+        <option id="addictionValue">Loading...</option>
+    </select>
+
+    <!-- Hidden section for addiction type -->
+    <div id="addictionTypeDiv">
+        <label for="addictionTypeInput">होय असल्यास - व्यसनाचा प्रकार कोणता</label>
+        <input type="text" id="addictionTypeInput" class="form-control" placeholder="व्यसनाचा प्रकार लिहा................" disabled>
+    </div>
+</div>
+
+<div class="container">
+    <table>
+        <tr>
+            <th colspan="2">41. समितीसमोर सादर करण्यापूर्वी बालक कोणासोबत वास्तव्यास होते?</th>
+        </tr>
+        <tr>
+            <td>वास्तव्यास संबंध</td>
+            <td>तपशील</td>
+        </tr>
+        <tbody>
+            <tr>
+                <td>(i)पालक ( पालक ) आई / वडील / दोन्ही</td>
+                <td>
+                    <input type="text" id="parentDetails" class="form-control" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>(ii)भावंड / रक्ताचे नातेवाईक</td>
+                <td>
+                    <input type="text" id="siblingDetails" class="form-control" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>(iii)पालक नाते</td>
+                <td>
+                    <input type="text" id="relativeDetails" class="form-control" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>(iv)मित्र</td>
+                <td>
+                    <input type="text" id="friendDetails" class="form-control" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>(v)रस्त्यावर</td>
+                <td>
+                    <input type="text" id="streetDetails" class="form-control" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>(vi)रात्र निवारा</td>
+                <td>
+                    <input type="text" id="shelterDetails" class="form-control" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>(vii) अनाथालय / वसतीगृह / तत्सम घर</td>
+                <td>
+                    <input type="text" id="orphanageDetails" class="form-control" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>(viii) इतर ( कृपया स्पष्ट करा )</td>
+                <td>
+                    <input type="text" id="otherDetails" class="form-control" disabled>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <table>
+        <tr>
+            <td>42. बालकाची घरातून पळून जाण्याची प्रवृत्ती / इतिहास असेल तर :</td>
+            <td>
+                <input type="text" id="runningAwayHistory" class="form-control" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td>43. घरातील शिस्तीबाबत पालकांचा दृष्टीकोन व त्याबाबत बालकाची प्रतिक्रीया</td>
+            <td>
+                <input type="text" id="disciplinePerspective" class="form-control" disabled>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="container">
+    <table>
+        <tr>
+            <td>45. बालक हरविले आहे का?</td>
+            <td>
+                <select id="isLost" disabled>
+                    <option id="isLostValue">Loading...</option>
+                </select>
+            </td>
+        </tr>
+        <tr id="complaintFiled">
+            <td>45.1. जर बालक हरविले असेल तर आई - वडिलांनी तक्रार दाखल केली आहे काय?</td>
+            <td>
+                <select id="complaint" disabled>
+                    <option id="complaintValue">Loading...</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>46. बालक एखाद्या अपराधाचा बळी आहे का?</td>
+            <td>
+                <select id="isVictim" disabled>
+                    <option id="isVictimValue">Loading...</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="container">
+    <h1>गैरवर्तनाचे प्रकार</h1>
+    <table>
+        <tr>
+            <th>गैरवर्तनाचे प्रकार</th>
+            <th>होय</th>
+            <th>नाही</th>
+            <th>स्पष्ट करा (पालक / भावंड / नियोक्ते / इतर)</th>
+        </tr>
+        <tr>
+            <td>(i) शाब्दिक गैरवर्तन</td>
+            <td>
+                <input type="radio" id="verbal_abuse_yes" name="verbal_abuse" value="yes" disabled>
+                <label for="verbal_abuse_yes">होय</label>
+            </td>
+            <td>
+                <input type="radio" id="verbal_abuse_no" name="verbal_abuse" value="no" disabled>
+                <label for="verbal_abuse_no">नाही</label>
+            </td>
+            <td><input type="text" id="verbal_abuse_detail" name="verbal_abuse_detail" placeholder="कृपया स्पष्ट करा" disabled></td>
+        </tr>
+        <tr>
+            <td>(ii) शारीरिक शोषण</td>
+            <td>
+                <input type="radio" id="physical_abuse_yes" name="physical_abuse" value="yes" disabled>
+                <label for="physical_abuse_yes">होय</label>
+            </td>
+            <td>
+                <input type="radio" id="physical_abuse_no" name="physical_abuse" value="no" disabled>
+                <label for="physical_abuse_no">नाही</label>
+            </td>
+            <td><input type="text" id="physical_abuse_detail" name="physical_abuse_detail" placeholder="कृपया स्पष्ट करा" disabled></td>
+        </tr>
+        <tr>
+            <td>(iii) लैंगिक अत्याचार</td>
+            <td>
+                <input type="radio" id="sexual_abuse_yes" name="sexual_abuse" value="yes" disabled>
+                <label for="sexual_abuse_yes">होय</label>
+            </td>
+            <td>
+                <input type="radio" id="sexual_abuse_no" name="sexual_abuse" value="no" disabled>
+                <label for="sexual_abuse_no">नाही</label>
+            </td>
+            <td><input type="text" id="sexual_abuse_detail" name="sexual_abuse_detail" placeholder="कृपया स्पष्ट करा" disabled></td>
+        </tr>
+        <tr>
+            <td>(iv) इतर</td>
+            <td>
+                <input type="radio" id="other_abuse_yes" name="other_abuse" value="yes" disabled>
+                <label for="other_abuse_yes">होय</label>
+            </td>
+            <td>
+                <input type="radio" id="other_abuse_no" name="other_abuse" value="no" disabled>
+                <label for="other_abuse_no">नाही</label>
+            </td>
+            <td><input type="text" id="other_abuse_detail" name="other_abuse_detail" placeholder="कृपया स्पष्ट करा" disabled></td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Retrieve data from localStorage
+        document.getElementById('addictionValue').textContent = localStorage.getItem('addiction') || 'नाही';
+        document.getElementById('addictionTypeInput').value = localStorage.getItem('addictionType') || '';
+        document.getElementById('parentDetails').value = localStorage.getItem('parentDetails') || '';
+        document.getElementById('siblingDetails').value = localStorage.getItem('siblingDetails') || '';
+        document.getElementById('relativeDetails').value = localStorage.getItem('relativeDetails') || '';
+        document.getElementById('friendDetails').value = localStorage.getItem('friendDetails') || '';
+        document.getElementById('streetDetails').value = localStorage.getItem('streetDetails') || '';
+        document.getElementById('shelterDetails').value = localStorage.getItem('shelterDetails') || '';
+        document.getElementById('orphanageDetails').value = localStorage.getItem('orphanageDetails') || '';
+        document.getElementById('otherDetails').value = localStorage.getItem('otherDetails') || '';
+        document.getElementById('runningAwayHistory').value = localStorage.getItem('runningAwayHistory') || '';
+        document.getElementById('disciplinePerspective').value = localStorage.getItem('disciplinePerspective') || '';
+        document.getElementById('isLostValue').textContent = localStorage.getItem('isLost') || 'नाही';
+        document.getElementById('complaintValue').textContent = localStorage.getItem('complaint') || 'नाही';
+        document.getElementById('isVictimValue').textContent = localStorage.getItem('isVictim') || 'नाही';
+
+        // Set radio buttons and details for abuse types
+        setAbuseType('verbal_abuse', 'verbal_abuse_detail');
+        setAbuseType('physical_abuse', 'physical_abuse_detail');
+        setAbuseType('sexual_abuse', 'sexual_abuse_detail');
+        setAbuseType('other_abuse', 'other_abuse_detail');
+    });
+
+    function setAbuseType(abuseType, detailInputId) {
+        const abuseValue = localStorage.getItem(abuseType);
+        const detailValue = localStorage.getItem(detailInputId);
+        if (abuseValue === 'yes') {
+            document.getElementById(`${abuseType}_yes`).checked = true;
+        } else {
+            document.getElementById(`${abuseType}_no`).checked = true;
+        }
+        document.getElementById(detailInputId).value = detailValue || '';
+    }
+</script>
+<div class="container">
+    <h2>बालकासोबत झालेल्या वाईट वागणूकीचे प्रकार</h2>
+    <table>
+        <tr>
+            <th>प्रकार</th>
+            <th>तपशील</th>
+        </tr>
+        <tr>
+            <td>(i) भोजन न देणे</td>
+            <td id="showBadBehavior1"></td>
+        </tr>
+        <tr>
+            <td>(ii) निर्दयीपणे मारहाण</td>
+            <td id="showBadBehavior2"></td>
+        </tr>
+        <tr>
+            <td>(iii) दुखापत करणे</td>
+            <td id="showBadBehavior3"></td>
+        </tr>
+        <tr>
+            <td>(iv) इतर</td>
+            <td id="showBadBehavior4"></td>
+        </tr>
+        <tr>
+            <td>(v) इतर</td>
+            <td id="showBadBehavior5"></td>
+        </tr>
+    </table>
+
+    <h2>बालकाचे शोषण</h2>
+    <table>
+        <tr>
+            <th>प्रकार</th>
+            <th>उत्तर</th>
+        </tr>
+        <tr>
+            <td>(i) पैसे न देता काम करविणे</td>
+            <td id="showExploitation1"></td>
+        </tr>
+        <tr>
+            <td>(ii) कमी दरात जास्त वेळ काम करून घेणे</td>
+            <td id="showExploitation2"></td>
+        </tr>
+        <tr>
+            <td>(iii) इतर</td>
+            <td id="showExploitationOther"></td>
+        </tr>
+    </table>
+
+    <h2>इतर माहिती</h2>
+    <table>
+        <tr>
+            <td>बालकाला विकत घेतले किंवा विकले आहे का?</td>
+            <td id="showPurchasedOrSold"></td>
+        </tr>
+        <tr>
+            <td>बालकाचा भीक मागण्यासाठी वापर?</td>
+            <td id="showBeggingUse"></td>
+        </tr>
+        <tr>
+            <td>बालकाचा कोणतीही टोळीने वापर?</td>
+            <td id="showGangUse"></td>
+        </tr>
+        <tr>
+            <td>मागील संस्था प्रकरणाचा इतिहास:</td>
+            <td id="showInstitutionHistory"></td>
+        </tr>
+        <tr>
+            <td>गुन्हेगाराचा तपशील:</td>
+            <td id="showCriminalDetails"></td>
+        </tr>
+        <tr>
+            <td>बालकाचा गुन्हेगाराबाबतचा दृष्टीकोन:</td>
+            <td id="showChildPerspective"></td>
+        </tr>
+        <tr>
+            <td>पोलिसांना माहिती देण्यात आली आहे का?</td>
+            <td id="showPoliceInformed"></td>
+        </tr>
+        <tr>
+            <td>गुन्हेगाराविरूध्द कारवाई:</td>
+            <td id="showActionTaken"></td>
+        </tr>
+        <tr>
+            <td>इतर अभिप्राय:</td>
+            <td id="showOtherComments"></td>
+        </tr>
+    </table>
+</div>
+    <script>
+        // Retrieve and display data from local storage
+        document.getElementById('showBadBehavior1').innerText = localStorage.getItem('badBehavior1');
+        document.getElementById('showBadBehavior2').innerText = localStorage.getItem('badBehavior2');
+        document.getElementById('showBadBehavior3').innerText = localStorage.getItem('badBehavior3');
+        document.getElementById('showBadBehavior4').innerText = localStorage.getItem('badBehavior4');
+        document.getElementById('showBadBehavior5').innerText = localStorage.getItem('badBehavior5');
+        document.getElementById('showExploitation1').innerText = localStorage.getItem('exploitation1');
+        document.getElementById('showExploitation2').innerText = localStorage.getItem('exploitation2');
+        document.getElementById('showExploitationOther').innerText = localStorage.getItem('exploitationOther');
+        document.getElementById('showPurchasedOrSold').innerText = localStorage.getItem('purchasedOrSold');
+        document.getElementById('showBeggingUse').innerText = localStorage.getItem('beggingUse');
+        document.getElementById('showGangUse').innerText = localStorage.getItem('gangUse');
+        document.getElementById('showInstitutionHistory').innerText = localStorage.getItem('institutionHistory');
+        document.getElementById('showCriminalDetails').innerText = localStorage.getItem('criminalDetails');
+        document.getElementById('showChildPerspective').innerText = localStorage.getItem('childPerspective');
+        document.getElementById('showPoliceInformed').innerText = localStorage.getItem('policeInformed');
+        document.getElementById('showActionTaken').innerText = localStorage.getItem('actionTaken');
+        document.getElementById('showOtherComments').innerText = localStorage.getItem('otherComments');
+    </script>
+ <div class="container">
+        
+    <table>
+        <th colspan="6">चौकशीचे निष्कर्ष</th>
+        <tr>
+            <td>१.भावनात्मक घटक :</td>
+            <td id="displayEmotionalFactor"></td>
+        </tr>
+        <tr>
+            <td>2. शारीरिक स्थिती:</td>
+            <td id="displayPhysicalCondition"></td>
+        </tr>
+        <tr>
+            <td>3. बुद्धिमत्ता :</td>
+            <td id="displayIntelligence"></td>
+        </tr>
+        <tr>
+            <td>४.सामाजिक आणि आर्थिक घटक:</td>
+            <td id="displaySocialEconomicFactor"></td>
+        </tr>
+        <tr>
+            <td>५.समस्येची संभाव्य कारणे:</td>
+            <td id="displayPotentialCauses"></td>
+        </tr>
+        <tr>
+            <td>६. गुन्ह्याची कारणे / योगदान घटक यासह प्रकरणाचे विश्लेषण :</td>
+            <td id="displayCrimeAnalysis"></td>
+        </tr>
+        <tr>
+            <td>७. बालकाला काळजी व संरक्षणाची गरज असल्याची कारणे::</td>
+            <td id="displayNeedForCare"></td>
+        </tr>
+        <tr>
+            <td>८.तज्ज्ञांची मते :</td>
+            <td id="displayExpertOpinion"></td>
+        </tr>
+        <tr>
+            <td>९. मनो - सामाजिक तज्ज्ञांचे मूल्यांकन::</td>
+            <td id="displaySocialExpertEvaluation"></td>
+        </tr>
+        <tr>
+            <td>१०. धार्मिक कारक ::</td>
+            <td id="displayReligiousFactor"></td>
+        </tr>
+        <tr>
+            <td>११. बालकाला ज्या कुटुंबात पुनःस्थापित करावयाचे आहे त्याचे जोखीम विश्लेषण :</td>
+            <td id="displayRiskAnalysis"></td>
+        </tr>
+        <tr>
+            <td>१२. मागील संस्था / प्रकरणाचा इतिहास आणि वैयक्तिक काळजी आराखडा , जर असल्यास ::</td>
+            <td id="displayPreviousInstitutionHistory"></td>
+        </tr>
+        <tr>
+            <td>१३. बालकाला मनोवैज्ञानिक सहाय्य, पुनर्वसन व पुनर्एकात्मिकरण याबाबत बालविकास अधिकारी / व्यक्तीचिकीत्सक / सामाजिक कार्यकर्ता यांची शिफारस आणि सुचविण्यात आलेली योजना . स्वाक्षरी ( नियुक्त करण्यात आलेल्या व्यक्तीची ):</td>
+            <td id="displayPsychologicalSupportRecommendation"></td>
+        </tr>
+        <tr>
+            <td>अभिप्राय :</td>
+            <td id="displayFeedback"></td>
+        </tr>
+        <tr>
+            <td>अहवाल तयार करणाऱ्यांच्या व्यक्तीची स्वाक्षरी:</td>
+            <td id="displayReporterSignature"></td>
+        </tr>
+        <tr>
+            <td>नाव:</td>
+            <td id="displayReporterName"></td>
+        </tr>
+        <tr>
+            <td>पदनाम:</td>
+            <td id="displayReporterDesignation"></td>
+        </tr>
+        <tr>
+            <td>दिनांक:</td>
+            <td id="displayReportDate"></td>
+        </tr>
+        <tr>
+            <td>ठिकाण:</td>
+            <td id="displayReportLocation"></td>
+        </tr>
+    </table>
+    <div class="Prenext">
+         <a href="seven.html">
+            <button type="button" style="margin-right: 5px;">Save PDF</button>
+        </a> 
+    </div>
+</div>
+
+<script>
+    // Function to retrieve and display data from localStorage
+    function displayData() {
+        document.getElementById('displayEmotionalFactor').innerText = localStorage.getItem('emotionalFactor');
+        document.getElementById('displayPhysicalCondition').innerText = localStorage.getItem('physicalCondition');
+        document.getElementById('displayIntelligence').innerText = localStorage.getItem('intelligence');
+        document.getElementById('displaySocialEconomicFactor').innerText = localStorage.getItem('socialEconomicFactor');
+        document.getElementById('displayPotentialCauses').innerText = localStorage.getItem('potentialCauses');
+        document.getElementById('displayCrimeAnalysis').innerText = localStorage.getItem('crimeAnalysis');
+        document.getElementById('displayNeedForCare').innerText = localStorage.getItem('needForCare');
+        document.getElementById('displayExpertOpinion').innerText = localStorage.getItem('expertOpinion');
+        document.getElementById('displaySocialExpertEvaluation').innerText = localStorage.getItem('socialExpertEvaluation');
+        document.getElementById('displayReligiousFactor').innerText = localStorage.getItem('religiousFactor');
+        document.getElementById('displayRiskAnalysis').innerText = localStorage.getItem('riskAnalysis');
+        document.getElementById('displayPreviousInstitutionHistory').innerText = localStorage.getItem('previousInstitutionHistory');
+        document.getElementById('displayPsychologicalSupportRecommendation').innerText = localStorage.getItem('psychologicalSupportRecommendation');
+        document.getElementById('displayFeedback').innerText = localStorage.getItem('feedback');
+        document.getElementById('displayReporterSignature').innerText = localStorage.getItem('reporterSignature');
+        document.getElementById('displayReporterName').innerText = localStorage.getItem('reporterName');
+        document.getElementById('displayReporterDesignation').innerText = localStorage.getItem('reporterDesignation');
+        document.getElementById('displayReportDate').innerText = localStorage.getItem('reportDate');
+        document.getElementById('displayReportLocation').innerText = localStorage.getItem('reportLocation');
+    }
+
+    // Call displayData function on page load
+    window.onload = displayData;
+</script>
+ </body>

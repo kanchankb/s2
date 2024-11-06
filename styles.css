@@ -1,0 +1,456 @@
+/* General Styles */ 
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;                                                     
+    /* padding: 20px; */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px; /* Increased padding for better spacing */
+    background: white;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
+     /* Slightly darker shadow */
+}
+
+h2, h3 {
+    color: #0056b3; /* Set a specific color for headers */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Form Styles */
+/* form {
+    width: 100%;
+} */
+
+label {
+    font-weight: bold;
+    margin-top: 0.1px;
+    display: inline-block;
+    font-size: 16px; /* Increased label font size */
+}
+
+input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 4px; /* Increased padding for larger inputs */
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Slightly larger border radius */
+    box-sizing: border-box;
+    font-size: 16px; /* Increased input font size */
+}
+
+textarea {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px; /* Increased textarea font size */
+}
+
+input[type="text"]:focus, input[type="date"]:focus, select:focus {
+    border-color: rgba(255, 102, 153, 0.8);
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 102, 153, 0.8); /* Increased shadow on focus */
+}
+
+/* table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+} */
+
+th, td {
+    /* text-align: left;
+    padding: 15px; /* Increased padding for table cells */
+    /* border: 1px solid #ddd; */
+
+    padding: 6px;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+} 
+
+th {
+    background-color: rgba(255, 102, 153, 0.8);
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+textarea {
+    resize: vertical;
+}
+.button-container {
+    display: flex;              /* Use flexbox for centering */
+    justify-content: center;    /* Center horizontally */
+    margin-top: 20px;          /* Add some spacing above */
+}
+
+.save-pdf {
+    padding: 12px 25px;        /* Adjust padding for the button */
+    background-color: rgba(255, 102, 153, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;           /* Adjust font size as needed */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.save-pdf:hover {
+    background-color: #e05b9e; /* Darker shade for hover effect */
+}
+
+
+.add-row {
+    margin-top: 20px;
+    display: block;
+    background-color: rgba(255, 102, 153, 0.8);
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Increased padding */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-row:hover {
+    background-color: rgba(255, 102, 153, 0.8);
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Section and Table Spacing */
+.section, .details-section {
+    margin-bottom: 30px;
+}
+
+.details-section {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.div {
+    text-align: right;
+}
+
+.last {
+    background-color: #f9f9f9; 
+    padding: 20px; /* Increased padding */
+    /* border-radius: 8px; */
+    margin: 20px auto;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15); /* Slightly darker shadow */
+}
+
+.last label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8px;
+}
+
+
+
+.fam_table{
+    margin-left: -3rem;
+}
+
+.submit {
+    text-align: center;
+}
+
+.family-card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Card Styling */
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(193, 92, 136, 0.1);
+}
+
+/* Heading Styling */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Card Layout */
+/* .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 20px;  */
+}
+
+/* Common Card Styling */
+
+
+
+
+/* --------------------------------------- */
+
+.family-card-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.family-card {
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 0;
+} 
+
+.card-header {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    padding: 2px 5px;
+    margin: 0;
+}
+
+.card-item {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 2px 0;
+}
+
+.card-item label {
+    width: 100px;
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+.card-item input {
+    flex: 1;
+    padding: 3px;
+    margin: 0;
+    font-size: 0.9em;
+
+}
+
+/* ------------------------------------------- */
+
+
+/* Hover Effect for Cards */
+.family-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Form Control Styling */
+.form-control {
+    width: 100%; /* Full width for input fields */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Larger font size for inputs */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .family-card {
+        flex: 0 1 100%; /* Stacks cards in a single column on small screens */
+    }
+}
+
+/* Optional Button Styling */
+button {
+    background-color:  rgba(255, 102, 153, 0.8); /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px; /* Consistent font size for buttons */
+    text-align: center;
+}
+
+button:hover {
+    background-color:  rgba(255, 102, 153, 0.8); /* Darker shade for hover effect */
+}
+
+
+/* Responsive Table */
+@media screen and (max-width: 768px) {
+    th, td {
+        padding: 12px;
+        font-size: 14px;
+        /* width: 100%; */
+    }
+    
+    input[type="text"], input[type="date"], select {
+        padding: 12px; /* Adjusted padding for smaller screens */
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px; /* Consistent button size */
+        padding: 10px 20px; /* Adjusted for smaller screens */
+    }
+
+    h2, h3 {
+        font-size: 20px; /* Slightly larger headings */
+    }
+}
+
+/* Table for Family Details */
+#familyDetailsTable th, #familyDetailsTable td {
+    border: 1px solid rgba(255, 102, 153, 0.8);
+}
+
+#familyDetailsTable th {
+    background-color: rgba(255, 102, 153, 0.8);
+    color: white;
+}
+
+#familyDetailsTable td {
+    background-color: #ffffff;
+}
+
+/* Disability Dropdown and Options */
+#disabilityDropdown, .radio-options {
+    margin-top: 15px;
+}
+
+.radio-options label {
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Select Option Style */
+select {
+    font-size: 16px; /* Increased select font size */
+}
+
+/* Table for Family Relationships */
+table select {
+    padding: 10px; /* Adjusted padding for select */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Focused Input States */
+input[type="text"]:focus, input[type="date"]:focus, select:focus {
+    border-color: #e05b9e;
+    outline: none;
+}
+
+/* Buttons and Interaction States */
+button:active {
+    transform: scale(0.98);
+    background-color: #e05b9e;
+}
+
+.last label {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.last input[type="text"],
+.last input[type="date"] {
+    width: 100%;
+}
+
+
+
+
+/* ---------------------  add css----------------*/
+
+
+
+#serial_no {
+    width: 50px;
+}
+
+#committee{
+   width: 150px;
+}
+
+#case_no{
+    width: 100px;
+}
+
+#date{
+    margin-top: 0.5px;
+    width: 100px;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+#child_name,#contact_number,#last_address,#address_mark,#permanent_address,#grade,#school_name,#aadhar_no_guardian,#guardian_name,#aadhar_no_mother,#mother_name,#aadhar_no_father,#father_name,#religion,#caste,#gender,#birth_date,#aadhar_no_child{
+margin-bottom: 5px;
+}
+
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    background-color: #fff;
+}
+
+
+
+.form-group {
+    margin-bottom: 0;
+}
+
+
+.carda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
